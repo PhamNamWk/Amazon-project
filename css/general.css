@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Roboto, Aria;
+}
+.text-bold {
+  font-weight: bold;
+}
+.text-white {
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+.text-sm {
+  font-size: 13px;
+}
+.text-md {
+  font-size: 16px;
+}
+.limit-text-to-two-line {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

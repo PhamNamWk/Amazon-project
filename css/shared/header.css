@@ -1,0 +1,144 @@
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 60px;
+  padding: 0px 12px;
+  background-color: rgb(19, 25, 33);
+  justify-content: space-between;
+}
+.logo {
+  padding: 6px;
+  width: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo .logo-desktop {
+  width: 100px;
+  display: inline;
+}
+.logo .logo-mobile {
+  width: 35px;
+  display: none;
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  max-width: 900px;
+  min-width: 20px;
+  margin: 0px 20px 0px 80px;
+}
+.search-input {
+  border: none;
+  padding: 6px 15px;
+  height: 40px;
+  width: 800px;
+  font-size: 16px;
+  min-width: 20px;
+
+  border-radius: 5px 0px 0px 5px;
+}
+.search-box .btn-search {
+  border: none;
+  background-color: rgb(254, 189, 105);
+  height: 40px;
+  padding: 6px 10px;
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
+}
+.search-box .btn-search img {
+  width: 25px;
+}
+.order-box-desktop {
+  display: flex;
+  flex-shrink: 0;
+  margin: 5px 0px;
+  gap: 10px;
+}
+
+.order-box-desktop > a {
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+.order-box-desktop > a:hover {
+  border-color: white;
+}
+.order-box-mobile {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+}
+.cart {
+  display: flex;
+}
+.quantity-cart {
+  position: absolute;
+  right: 50%;
+  left: 50%;
+  top: 0;
+  color: orange;
+  font-weight: bold;
+}
+.cart-text p {
+  margin-top: 15px;
+}
+.cart-icon {
+  position: relative;
+}
+
+.cart .cart-icon img {
+  width: 55px;
+}
+.hamburger-menu-dropdown {
+  position: absolute;
+  height: 0px;
+  overflow: hidden;
+
+  top: 60px;
+  left: 0;
+  right: 0;
+  transition: height 0.3s ease;
+  background-color: rgb(19, 25, 33);
+}
+.hamburger-menu-dropdown a {
+  display: block;
+  text-align: center;
+  color: white;
+  padding: 10px 0px;
+  font-weight: bold;
+}
+.hamburger-menu-active {
+  height: 90px;
+}
+.cart-quantity {
+  color: orange;
+}
+@media (max-width: 799px) {
+  .header .search-box {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 577px) {
+  .logo .logo-desktop {
+    display: none;
+  }
+  .logo .logo-mobile {
+    display: block;
+  }
+  .order-box-desktop {
+    display: none;
+  }
+  .header .order-box-mobile {
+    display: flex;
+  }
+  .header .search-box {
+    margin: 0px 10px;
+  }
+}
