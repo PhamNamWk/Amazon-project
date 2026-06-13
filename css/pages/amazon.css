@@ -1,7 +1,5 @@
 /* Main Content CSS */
-.main-content {
-  margin-top: 60px;
-}
+
 .product-list {
   display: grid;
   grid-template-columns: repeat(6, 1fr);

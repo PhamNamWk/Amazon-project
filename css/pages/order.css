@@ -1,0 +1,146 @@
+.main-content {
+  margin: 60px auto 90px auto;
+  width: 100%;
+  padding: 0px 20px;
+  max-width: 850px;
+  min-width: 250px;
+  padding-top: 25px;
+}
+.page-title {
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.order-list {
+  width: 100%;
+}
+.order-list .order-item {
+  width: 100%;
+}
+.order-info {
+  background-color: rgb(240, 242, 242);
+  width: 100%;
+  display: flex;
+  flex-shrink: 1;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 60px;
+  border-radius: 20px 20px 0px 0px;
+  border: 1px solid rgb(193, 193, 193, 0.5);
+}
+.left-section {
+  display: flex;
+  flex-shrink: 0;
+  gap: 45px;
+}
+@media (max-width: 572px) {
+  .order-info,
+  .left-section {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .right-section,
+  .order-placed-con,
+  .total-con {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: auto 1fr;
+  }
+}
+/* order-item  */
+.order-list {
+  border: 1px solid rgb(193, 193, 193, 0.5);
+  border-top: none;
+}
+.order-item {
+  display: grid;
+  grid-template-columns: 100px 1fr 220px;
+  gap: 35px;
+  padding: 40px 30px;
+}
+.order-item .order-item-img {
+  display: flex;
+  align-items: center;
+}
+.order-item .order-item-img img {
+  max-width: 110px;
+  max-height: 110px;
+}
+.order-item-info p {
+  line-height: 25px;
+}
+.buy-again-btn {
+  margin-top: 10px;
+  padding: 6px 15px;
+  border: none;
+  background-color: rgb(255, 216, 20);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.buy-again-btn span {
+  flex-shrink: 0;
+}
+.buy-again-btn:hover {
+  background-color: rgb(239, 202, 18);
+}
+.buy-again-icon {
+  width: 25px;
+}
+.track-package-con button {
+  width: 100%;
+  background-color: white;
+  border: 0.5px solid rgb(171, 171, 171, 0.5);
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 15px;
+  box-shadow: 0px 1px 3px 1px rgba(214, 214, 214, 0.375);
+  cursor: pointer;
+}
+.track-package-con button:hover {
+  background-color: rgb(245, 245, 245);
+}
+.order-item-img.order-image-space {
+  display: none;
+}
+@media (max-width: 800px) {
+  .order-item {
+    display: grid;
+    row-gap: 8px;
+    grid-template-columns: 100px 1fr;
+  }
+  .order-item-img.order-image-space {
+    display: block;
+  }
+  .track-package-con button {
+    width: 144px;
+  }
+}
+@media (max-width: 450px) {
+  .order-item {
+    display: grid;
+    row-gap: 8px;
+    grid-template-columns: 1fr;
+  }
+  .buy-again-btn,
+  .track-package-con button {
+    width: 100%;
+  }
+  .order-item .order-item-img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  .order-item .order-item-img img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+  .order-item-img.order-image-space {
+    display: none;
+  }
+}
