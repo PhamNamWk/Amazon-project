@@ -1,0 +1,51 @@
+.main-content {
+  margin: 60px auto 90px auto;
+  width: 100%;
+  padding: 0px 20px;
+  max-width: 850px;
+  min-width: 280px;
+  padding-top: 25px;
+}
+.nav-orders {
+  margin-bottom: 30px;
+}
+.nav-orders a {
+  text-decoration: underline;
+  color: #017cb6;
+}
+.package-info .timer-status {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.package-info .package-image img {
+  margin-top: 20px;
+  width: 140px;
+}
+.package-tracking .status {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  margin-top: 55px;
+  font-weight: 500;
+}
+.package-tracking .status > div:first-child {
+  color: green;
+}
+.package-tracking .progres-bar-con {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 60px;
+  border: 1px solid rgba(167, 167, 167, 0.415);
+}
+.progres-bar-con .progres-bar {
+  width: 8%;
+  height: 24px;
+  background-color: green;
+  border-radius: 60px;
+}
+@media (max-width: 450px) {
+  .package-tracking .status {
+    flex-direction: column;
+  }
+}

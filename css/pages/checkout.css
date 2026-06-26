@@ -1,0 +1,228 @@
+header {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 9px 30px;
+  background-color: white;
+}
+.header {
+  display: flex;
+
+  justify-content: center;
+
+  max-width: 1100px;
+  width: 100%;
+}
+.header,
+.header .left-section,
+.header .mid-section,
+.header .right-section {
+  display: flex;
+  align-items: center;
+}
+.header .left-section {
+  width: 300px;
+}
+.header .mid-section {
+  flex-grow: 1;
+  flex-shrink: 0;
+  font-size: 25px;
+  font-weight: 500;
+  justify-content: center;
+  /* min-width: 180px; */
+}
+.header .mid-section .cart-quantity {
+  color: rgb(0, 113, 133);
+  font-size: 23px;
+}
+.header .right-section {
+  width: 300px;
+  align-items: centers;
+  justify-content: right;
+}
+.header .left-section .logo {
+  width: 100px;
+  margin-top: 10px;
+}
+.logo-mobile {
+  width: 34px;
+  display: none;
+}
+@media (max-width: 1000px) {
+  .header .mid-section {
+    font-size: 18px;
+  }
+  .header .mid-section .cart-quantity {
+    color: rgb(0, 113, 133);
+    font-size: 17px;
+  }
+}
+@media (max-width: 573px) {
+  .logo-mobile {
+    display: block;
+  }
+  .left-section .logo {
+    display: none;
+  }
+}
+/* main content */
+.main-content {
+  padding: 30px 30px;
+  max-width: 1150px;
+  width: 100%;
+  /* margin: 0px auto;
+   */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+.main-content .title {
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 10px;
+}
+.left-section .order-item {
+  border-radius: 3px;
+  border: 1px solid rgba(183, 183, 183, 0.64);
+  padding: 20px;
+  margin-bottom: 12px;
+}
+.order-item .delivery-date {
+  color: green;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.order-item-detail {
+  display: grid;
+  column-gap: 25px;
+  grid-template-columns: 100px 1fr 1fr;
+}
+.order-item-left img {
+  width: 100%;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+.order-item-right > p,
+.order-item-mid .item-name {
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.order-item-mid .item-price {
+  margin-bottom: 5px;
+
+  color: rgb(177, 39, 4);
+  font-weight: 700;
+}
+.order-item-mid .item-quantity button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  padding: 0px 1px;
+  color: #017cb6;
+  cursor: pointer;
+}
+.order-item-mid .item-quantity button:hover {
+  color: rgb(196, 80, 0);
+}
+.delevery-con {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.delivery-choice {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.delivery-choice .left-content input {
+  width: 19px;
+  height: 19px;
+}
+.delivery-choice .right-content .delivery-expect {
+  color: green;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+.delivery-choice .right-content .delivery-price {
+  color: gray;
+}
+
+.right-section .order-summary {
+  border-radius: 3px;
+  padding: 20px;
+  border: 1px solid rgba(183, 183, 183, 0.64);
+}
+.right-section .order-summary .title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.order-summary .order-total .order-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.order-summary .order-before-tax {
+  margin-top: 10px;
+}
+.order-summary .order-before-tax > div {
+  padding-top: 10px;
+}
+.order-summary .order-before-tax .total-before-tax,
+.order-summary .order-final {
+  border-top: 1px solid rgba(183, 183, 183, 0.64);
+  padding-top: 10px;
+}
+.order-summary .order-final {
+  padding-top: 15px !important;
+  color: rgb(177, 39, 4);
+  font-size: 18px !important;
+  font-weight: 800;
+}
+.place-order-con button {
+  width: 100%;
+  border: 1px solid rgb(252, 210, 0);
+  background-color: rgb(255, 216, 20);
+  font-weight: 500;
+  padding: 12px 0px;
+  margin: 15px 0px 5px 0px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.place-order-con button:hover {
+  background-color: rgb(234, 198, 19);
+}
+@media (max-width: 1000px) {
+  .grid-layout {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+  }
+  .right-section {
+    grid-row: 1;
+  }
+  .main-content {
+    max-width: 500px;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .order-item-detail {
+    grid-template-columns: 100px 1fr;
+    row-gap: 20px;
+  }
+  .order-item-detail .order-item-right {
+    grid-column: 1/-1;
+  }
+}
